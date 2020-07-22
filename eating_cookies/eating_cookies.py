@@ -4,19 +4,18 @@ Returns: an integer
 '''
 
 
-def eating_cookies(n, cache=None):
-    if n < 0:
-        return 0
+def eating_cookies(n):
+    # Your code here
+    # base case
     if n == 0:
-        return 1
-    if cache is None:
-        cache = {}
-    if n in cache:
-        return cache[n]
 
-    cache[n] = eating_cookies(
-        n - 3) + eating_cookies(n - 2) + eating_cookies(n - 1)
-    return cache[n]
+        return 1
+
+    if n < 0:
+
+        return 0
+
+    return eating_cookies(n-1) + eating_cookies(n-2) + eating_cookies(n-3)
 
 
 if __name__ == "__main__":
