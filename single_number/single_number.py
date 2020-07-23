@@ -4,12 +4,23 @@ Returns: an integer
 '''
 
 
-def single_number(arr):
-    # Your code here
+# def single_number(arr):
+#     # Your code here
 
-    for number in arr:
-        if arr.count(number) == 1:
-            return number
+#     for number in arr:
+#         if arr.count(number) == 1:
+#             return number
+
+def single_number(arr):
+
+    counts = {}
+    for x in arr:
+        if x in counts:
+            del counts[x]
+        else:
+            counts[x] = 1
+
+    return list(counts.keys())[0]
 
 
 if __name__ == '__main__':
