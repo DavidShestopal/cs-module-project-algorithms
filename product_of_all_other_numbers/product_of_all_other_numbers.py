@@ -29,7 +29,7 @@ def product_of_all_other_numbers(arr):
         new_array.append(running_product)
 
     pass
-    # Run backwards though the list multiplying by the cumulative product of the elements after
+    # Run backwards though the list multiplying by the cumulative product of the values
     running_product = 1
     for i in range(length-1, 0, -1):
         running_product *= arr[i]
